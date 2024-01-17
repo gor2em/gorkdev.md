@@ -108,36 +108,3 @@ client tarafına `json:""` ile istediğimiz değeri gönderebiliriz.
     Price float64 `json:"productPrice"`
   }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Temel Görevleri ise şunlardır:
-- Container Yönetimi (Kullanıcı tarafından verilen komutları alır ve konteynerleri yönetir. Başlatma, durdurma ve silme gibi)
-- Image İşleme (Docker Daemon, Docker Hub veya başka bir imaj kaynağından imajları çeker ve yerel imaj deposunda saklar, imajlar kullanıcı talepleri doğrultusunda işlenir)
-- Container İzolasyonu
-- Ağ Yönetimi
-- Docker API Sunma
-
-```bash
-docker pull postgres
-```
-
-> Özetle Docker, containerları kullanarak uygulamalar oluşturmayı, dağıtmayı ve kullammayı kolaylaştıran, Linux ve Windows üzerinde çalışan açık kaynaklı bir platformdur.
-
-
-Sevgilerle.
