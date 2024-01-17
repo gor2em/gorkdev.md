@@ -108,3 +108,74 @@ client tarafına `json:""` ile istediğimiz değeri gönderebiliriz.
     Price float64 `json:"productPrice"`
   }
 ```
+
+
+## Go Functions
+
+```bash
+  func sayHello(){
+    fmt.Println("hello.")
+  }
+
+  func getUserName() string {
+    return "Neo"
+  }
+
+  func getUserById (id int) (string, int){
+    println(id)
+    return "Neo", 32
+  }
+
+  name, age := getUserById(4)
+  fmt.Printf("Name: %v, age: %v", name, age)
+  --
+  func getUserById (id, ageInput int) (name string, age int){
+    println(id, ageInput)
+    return "Neo", 32
+  }
+
+  parametre uzunluğunu bilmiyorsak
+  func calculateTotal(products...float64) float64 {
+      totalAmount := 0.0
+
+      for index, price := range products {
+        totalAmount += price
+      }
+
+      **eğer index i kullanmayacaksak bize kızacak. onun yerine for _, price...**
+
+      return totalAmount
+  }
+
+  **Receiver Functions**
+
+  type Product struct {
+    Name string
+    Price float64
+    Stock int
+  }
+
+  Alıcı-FonksiyonAdı-GeriyeNeDönecek
+  func (p Product) Calculate(qty int) float64 {
+    return p.Price * float64(qty)
+  }
+  --
+  p := Product{
+    Name: "MacPro",
+    Price: 9000,
+    Stock:1
+  }
+  p.Calculate(2)
+
+  func (p *Product) ReduceStock(qty int) {
+    if p.Stock >= qty {
+      p.Stock -= qty
+    }
+  }
+
+  p.ReduceStock(1)
+
+```
+
+
+
